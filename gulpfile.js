@@ -17,8 +17,12 @@ var ghPages = require('gulp-gh-pages');
 
 gulp.task('deploy', function() {
   return gulp.src('./dist/**/*')
-    .pipe(ghPages());
+    .pipe(ghPages({
+      remoteUrl: 'https://github.com/raulmss/webAdriana2.0.git',
+      branch: 'master'
+    }));
 });
+
 //fim do adicionado
 // Load package.json for banner
 const pkg = require('./package.json');
