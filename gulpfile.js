@@ -12,7 +12,8 @@ const plumber = require("gulp-plumber");
 const rename = require("gulp-rename");
 const sass = require("gulp-sass");
 const uglify = require("gulp-uglify");
-//adicionado
+
+//adicionado por João Paulo em 11-11-2019
 var ghPages = require('gulp-gh-pages');
 
 gulp.task('deploy', function() {
@@ -22,8 +23,8 @@ gulp.task('deploy', function() {
       branch: 'master'
     }));
 });
-
 //fim do adicionado
+
 // Load package.json for banner
 const pkg = require('./package.json');
 
