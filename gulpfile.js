@@ -12,7 +12,14 @@ const plumber = require("gulp-plumber");
 const rename = require("gulp-rename");
 const sass = require("gulp-sass");
 const uglify = require("gulp-uglify");
+//adicionado
+var ghPages = require('gulp-gh-pages');
 
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
+//fim do adicionado
 // Load package.json for banner
 const pkg = require('./package.json');
 
